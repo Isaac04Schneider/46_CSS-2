@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Animación Simple</title>
+
+  <style>
+    body {
+      background-color: #111827;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    main {
+      text-align: center;
+    }
+
+    h1 {
+      font-weight: normal;
+      margin-bottom: 30px;
+    }
+
+    /* CUADRADO ANIMADO */
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #38bdf8;
+      margin: auto;
+      animation: mover 3s infinite;
+    }
+
+    /* ANIMACIÓN */
+    @keyframes mover {
+      0% {
+        transform: translateX(0) rotate(0deg);
+      }
+      50% {
+        transform: translateX(150px) rotate(180deg);
+        background-color: #a78bfa;
+      }
+      100% {
+        transform: translateX(0) rotate(360deg);
+      }
+    }
+
+    /* INTERACTIVIDAD */
+    .box:hover {
+      animation-play-state: paused;
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <h1>Animación Básica</h1>
+    <div class="box"></div>
+    <p>Pasa el mouse para pausar</p>
+  </main>
+
+</body>
+</html>
